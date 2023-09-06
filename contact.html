@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xtra Blog</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templatemo-xtra-blog.css" rel="stylesheet">
+<!--
+    
+TemplateMo 553 Xtra Blog
+
+https://templatemo.com/tm-553-xtra-blog
+
+-->
+</head>
+<body>
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo">
+                    <img src="llogo.png" alt="Logo">
+                </div>            
+                <h1 class="text-center"></h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    <li class="tm-nav-item active"><a href="index.html" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                       <h5> Blogs</h5>
+                    </a></li>
+                    <li class="tm-nav-item"><a href="gifts.html" class="tm-nav-link">
+                        <i class="fas fa-pen"></i>
+                       <h5> Gifts for loved ones </h5>
+                    </a></li>
+                    <li class="tm-nav-item"><a href="about.html" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                    <h5>   About Soiree Sage</h5>
+                    </a></li>
+                    <li class="tm-nav-item"><a href="contact.html" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                    <h5>Contact Us</h5>
+                    
+                    </a></li>
+                </ul>
+            </nav>
+            <div class="tm-mb-65">
+                <a rel="nofollow" href="https://fb.com/templatemo" class="tm-social-link">
+                    <i class="fab fa-facebook tm-social-icon"></i>
+                </a>
+                <a href="https://twitter.com" class="tm-social-link">
+                    <i class="fab fa-twitter tm-social-icon"></i>
+                </a>
+                <a href="https://instagram.com" class="tm-social-link">
+                    <i class="fab fa-instagram tm-social-icon"></i>
+                </a>
+                <a href="https://linkedin.com" class="tm-social-link">
+                    <i class="fab fa-linkedin tm-social-icon"></i>
+                </a>
+            </div>
+            <p class="tm-mb-80 pr-5 text-white">
+                Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right side content will scroll up and down.
+            </p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+            
+            
+                <!-- Contact Start -->
+       
+
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="position-relative d-inline text-primary ps-4"> <span style="color:rgb(255, 196, 206);">Contact Us</span></h2>
+                            <h2 class="mt-2"> For Any Query</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <form onsubmit="submitForm(event)">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+        
+                // Compose email link
+                const mailtoLink = `mailto:anushka@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + "\n\nFrom: " + name + "\nEmail: " + email)}`;
+        
+                // Open default email client
+                window.location.href = mailtoLink;
+        
+                // Optionally, you can also submit the form to a backend server for further processing.
+                // For that, you'll need to use AJAX or fetch to send the form data to the server.
+                // Example using fetch:
+                // fetch('/your-server-endpoint', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({
+                //         name,
+                //         email,
+                //         subject,
+                //         message
+                //     })
+                // }).then(response => {
+                //     // Handle the response from the server if needed
+                // }).catch(error => {
+                //     // Handle any errors that occurred during the request
+                // });
+            }
+        </script>
+        
+        <!-- Contact End -->
+        
+        <h4>Contact Soiree Sage:</h4>
+        <br>Website: <a href="https://soiree-sage.000webhostapp.com/" target="_blank" rel="noopener">https://soiree-sage.000webhostapp.com/</a><br>
+        Email: <a href="mailto:soireesage@gmail.com">soireesage@gmail.com</a><br>
+        Phone: <a href="tel:+91XXXXXXXXXX">+91-6266315166</a><br>
+        instagram: <a href="https://www.instagram.com/soireesage/">@Soireesage</a></p>
+                        
+              
+                      
+            
+        </main>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>
